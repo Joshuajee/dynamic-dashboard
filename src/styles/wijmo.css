@@ -1,0 +1,20 @@
+
+
+.wj-flexgrid {
+    height: 330px;
+    border-radius: 0px;
+}
+
+.wj-flexgrid .wj-cell {
+    padding: 7px;
+    border: none;
+    border-radius: 0px;
+}
+
+
+/* Charts */
+
+.wj-flexchart  {
+    border: none;
+    height: 280px;
+}

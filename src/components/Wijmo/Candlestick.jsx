@@ -15,8 +15,7 @@ const tooltip = (`<b>{date:MMM dd}</b><br/>
 
 
 
-const palette =  ['rgba(70,107,176,1)', 'rgba(200,180,34,1)', 'rgba(20,136,110,1)', 'rgba(181,72,54,1)',
-    'rgba(110,89,68,1)', 'rgba(139,56,114,1)', 'rgba(115,178,43,1)', 'rgba(184,115,32,1)', 'rgba(20,20,20,1)']
+const palette =  ['rgba(70,107,176,1)']
 
 
 
@@ -47,7 +46,7 @@ const Candlestick = () => {
                 chartType="Candlestick" 
                 tooltipContent={tooltip} palette={palette}>
 
-            <Chart.FlexChartSeries binding="high,low,open,close"></Chart.FlexChartSeries>
+            <Chart.FlexChartSeries binding="high,low,open,close" />
             
             </Chart.FlexChart>
 

@@ -1,21 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FlexGrid, FlexGridColumn } from '@grapecity/wijmo.react.grid';
-import { getAssets } from '../../data';
+import { getAssets, randomInt } from '../../data';
 
 
-const Assets = () => {
+const Asset = () => {
 
 
-    const [data] = useState(getAssets());
+    const [data, setData] = useState(getAssets());
+
+    useEffect(() => {
+
+        const interval = setInterval(() => {
+            setData(getAssets())
+        }, 500)
+
+        return () => clearInterval(interval)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
+
 
     return (
-        <div className="assets">
-            <FlexGrid itemsSource={data}>
-                <FlexGridColumn header="Asset" binding="asset" width="*" format="n2"/>
-                {/* <FlexGridColumn header="Amount" binding="amount" width="*" format="n2"/> */}
-            </FlexGrid>
+        <div className="sidebar">
+
+            <div className="assets">
+
+                <FlexGrid 
+                    itemsSource={data} 
+                    selectionMode="Row">
+                    <FlexGridColumn header="Asset" binding="asset" width=".4*" />
+                    <FlexGridColumn header="Price %" binding="priceUpdate" width="*"  /> 
+                </FlexGrid>
+
+            </div>
+
         </div>
     )
 }
 
-export default Assets
+export default Asset;

@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { FlexGrid, FlexGridColumn } from '@grapecity/wijmo.react.grid';
+import { FlexGrid, FlexGridColumn} from '@grapecity/wijmo.react.grid';
 import { getTransactions } from '../../data';
-
 
 
 const TransactionsTable = () => {
@@ -16,11 +15,12 @@ const TransactionsTable = () => {
             <FlexGrid itemsSource={data}>
                 <FlexGridColumn binding="id" header="ID" width=".5*"/>
                 <FlexGridColumn header="Type" binding="type" width="*"/>
-                <FlexGridColumn header="Date" binding="date" width="*" format="n2"/>
-                <FlexGridColumn header="Asset" binding="asset" width="*" format="n2"/>
-                <FlexGridColumn header="Amount" binding="amount" width="*" format="n2"/>
-                <FlexGridColumn header="Status" binding="status" width="*" format="n2"/>
+                <FlexGridColumn header="Date" binding="date" width="*"/>
+                <FlexGridColumn header="Asset" binding="asset" width="*"/>
+                <FlexGridColumn header="Amount" binding="amount" width="*" />
+                <FlexGridColumn header="Status" binding="status" width="*" />
             </FlexGrid>
+            
         </div>
     )
 }

@@ -1,14 +1,12 @@
 
 
-.wj-flexgrid {
+.transactions .wj-flexgrid {
     height: 330px;
-    border-radius: 0px;
 }
 
 .wj-flexgrid .wj-cell {
     padding: 7px;
     border: none;
-    border-radius: 0px;
 }
 
 
@@ -17,4 +15,10 @@
 .wj-flexchart  {
     border: none;
     height: 280px;
+}
+
+/* Assets */
+
+.assets .wj-flexgrid {
+    height: 100%;
 }

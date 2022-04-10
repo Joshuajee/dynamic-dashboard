@@ -1,7 +1,8 @@
 import React from 'react';
 import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
-import SideBar from './components/SideBar';
+import Asset from './components/Wijmo/Asset';
+
 
 
 const App = () => {
@@ -10,7 +11,7 @@ const App = () => {
         <>
             <Navbar />
             <div className="app">
-                <SideBar />
+                <Asset />
                 <Dashboard />
             </div>
         </>

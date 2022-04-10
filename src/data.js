@@ -5,23 +5,24 @@ export function randomInt(min, max) { // min and max included
 
 //Transactions
 
-export  const assets = ["BTC", "ETH", "BNB", "AVAX"]
+export  const assets = ["BTC", "ETH", "BNB", "USDT", "ADA", "USDC", "SOL", "XRP", 
+                        "LUNA", "DOT", "DOGE", "BUSD", "UST", "SHIB", "WBTC", "MATIC",
+                        "AVAX", "NEAR", "CRO", "DAI"]
 
 export const getTransactions = () => {
 
     const Type = ["Buy", "Sell"]
-    const Asset = ["BTC", "ETH", "BNB", "AVAX"]
     const Status = ["Failed", "Pending", "Successful"]
 
     const data = []
 
     // create some random data
-    for (let i = 0; i < 100; i++) {
+    for (let i = 1; i <= 100; i++) {
         data.push({
             id: i,
             type: Type[randomInt(0, 1)],
-            date: Math.random() * 10000,
-            asset: Asset[randomInt(0, 3)],
+            date:  new Date(new Date() - (36000000 * i)),
+            asset: assets[randomInt(0, assets.length - 1)],
             amount: Math.random() * 10,
             status: Status[randomInt(0, 2)]
         });
@@ -106,10 +107,35 @@ export const getAssets = () => {
 
     const data = assets.map((asset) => {
 
-        return {asset, chart: [{x: 1, y: 1 }] }
+        const priceUpdate = randomInt(-10000, 10000) / 100
+
+        return {asset, priceUpdate }
     })
 
-    console.log(data)
+    return data
+}
+
+export const updatePrice = (assets) => {
+
+    const data = assets.map((asset) => {
+
+        const priceUpdate = randomInt(-10000, 10000) / 100
+
+        return {asset: asset.asset, priceUpdate }
+    })
 
     return data
+}
+
+
+/* Trade */
+
+export const guageData = () => {
+
+    const max = randomInt(0, 10000)
+    const value = randomInt(0, max)
+    const range1 = max * 0.3
+    const range2 =  max * 0.6
+
+    return { max, value, range1, range2 }
 }

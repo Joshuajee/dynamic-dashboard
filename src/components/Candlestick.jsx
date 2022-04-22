@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import * as Chart from '@grapecity/wijmo.react.chart';
-import { getAssetData, updateData } from '../../data';
+import { getAssetData, updateData } from '../data';
 
 
 const tooltip = (`<b>{date:MMM dd}</b><br/>

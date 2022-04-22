@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FlexGrid, FlexGridColumn } from '@grapecity/wijmo.react.grid';
-import { getAssets, randomInt } from '../../data';
+import { getAssets, randomInt } from '../data';
 
 
 const Asset = () => {

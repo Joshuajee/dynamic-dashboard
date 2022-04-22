@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FlexGrid, FlexGridColumn} from '@grapecity/wijmo.react.grid';
-import { getTransactions } from '../../data';
+import { getTransactions } from '../data';
 
 
 const TransactionsTable = () => {

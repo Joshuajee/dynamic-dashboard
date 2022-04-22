@@ -1,6 +1,6 @@
-import Candlestick from "./Wijmo/Candlestick"
-import TransactionsTable from "./Wijmo/TransactionTable"
-import Trade from "./Wijmo/Trade"
+import Candlestick from "./Candlestick"
+import TransactionsTable from "./TransactionTable"
+import Trade from "./Trade"
 
 
 const Dashboard = () => {

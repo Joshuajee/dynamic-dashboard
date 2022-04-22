@@ -1,15 +1,14 @@
 import React from 'react';
 import Dashboard from './components/Dashboard';
-import Navbar from './components/Navbar';
-import Asset from './components/Wijmo/Asset';
-
+import Asset from './components/Asset';
 
 
 const App = () => {
    
     return (
         <>
-            <Navbar />
+            <div className="navbar"> </div>
+
             <div className="app">
                 <Asset />
                 <Dashboard />

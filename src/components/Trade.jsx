@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {RadialGauge, Range} from '@grapecity/wijmo.react.gauge';
-import { guageData } from '../../data';
+import { guageData } from '../data';
 
 const Trade = () => {
 
